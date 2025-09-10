@@ -1,0 +1,15 @@
+C:\users\LENOVO\Documents\Doni\CliApp\bin\Debug\net9.0\CliApp.exe
+C:\users\LENOVO\Documents\Doni\CliApp\bin\Debug\net9.0\CliApp.deps.json
+C:\users\LENOVO\Documents\Doni\CliApp\bin\Debug\net9.0\CliApp.runtimeconfig.json
+C:\users\LENOVO\Documents\Doni\CliApp\bin\Debug\net9.0\CliApp.dll
+C:\users\LENOVO\Documents\Doni\CliApp\bin\Debug\net9.0\CliApp.pdb
+C:\users\LENOVO\Documents\Doni\CliApp\obj\Debug\net9.0\CliApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\users\LENOVO\Documents\Doni\CliApp\obj\Debug\net9.0\CliApp.AssemblyInfoInputs.cache
+C:\users\LENOVO\Documents\Doni\CliApp\obj\Debug\net9.0\CliApp.AssemblyInfo.cs
+C:\users\LENOVO\Documents\Doni\CliApp\obj\Debug\net9.0\CliApp.csproj.CoreCompileInputs.cache
+C:\users\LENOVO\Documents\Doni\CliApp\obj\Debug\net9.0\CliApp.sourcelink.json
+C:\users\LENOVO\Documents\Doni\CliApp\obj\Debug\net9.0\CliApp.dll
+C:\users\LENOVO\Documents\Doni\CliApp\obj\Debug\net9.0\refint\CliApp.dll
+C:\users\LENOVO\Documents\Doni\CliApp\obj\Debug\net9.0\CliApp.pdb
+C:\users\LENOVO\Documents\Doni\CliApp\obj\Debug\net9.0\CliApp.genruntimeconfig.cache
+C:\users\LENOVO\Documents\Doni\CliApp\obj\Debug\net9.0\ref\CliApp.dll
