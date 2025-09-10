@@ -1,4 +1,4 @@
-# 🔢 Text Processor CLI
+# Text Processor CLI
 
 [![.NET](https://img.shields.io/badge/.NET-6.0+-512BD4?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com/)
 [![C#](https://img.shields.io/badge/C%23-11.0-239120?style=flat-square&logo=c-sharp)](https://docs.microsoft.com/en-us/dotnet/csharp/)
@@ -9,7 +9,7 @@
 
 A sophisticated CLI application that transforms any text input through a comprehensive 5-step algorithm, producing deterministic numerical outputs with elegant mathematical operations.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#-features)
 - [Algorithm Overview](#-algorithm-overview)
@@ -21,18 +21,18 @@ A sophisticated CLI application that transforms any text input through a compreh
 - [Contributing](#-contributing)
 - [License](#-license)
 
-## ✨ Features
+## Features
 
-- 🎯 **5-Step Processing Algorithm** - Advanced text transformation pipeline
-- 📖 **Interactive Dictionary Viewer** - Explore character-to-number mappings
-- 🎨 **Beautiful CLI Interface** - ASCII art borders and emoji indicators
-- 🔄 **Deterministic Results** - Same input always produces same output
-- 🚀 **High Performance** - Optimized with LINQ and efficient data structures
-- 🌐 **Cross-Platform** - Runs on Windows, Linux, and macOS
-- 🛡️ **Error Resilient** - Robust input validation and error handling
-- 📊 **Step-by-Step Visualization** - Clear display of each processing stage
+- **5-Step Processing Algorithm** - Advanced text transformation pipeline
+- **Interactive Dictionary Viewer** - Explore character-to-number mappings
+- **Beautiful CLI Interface** - ASCII art borders and emoji indicators
+- **Deterministic Results** - Same input always produces same output
+- **High Performance** - Optimized with LINQ and efficient data structures
+- **Cross-Platform** - Runs on Windows, Linux, and macOS
+- **Error Resilient** - Robust input validation and error handling
+- **Step-by-Step Visualization** - Clear display of each processing stage
 
-## 🔄 Algorithm Overview
+## Algorithm Overview
 
 The program implements a sophisticated 5-step algorithm:
 
@@ -50,7 +50,7 @@ Input Text → [1] → [2] → [3] → [4] → [5] → Final Numbers
 | **4** | Sequence Refinement | Apply alternating sum, replace last 2 elements |
 | **5** | Final Transformation | Convert even numbers to odd, keep odd numbers same |
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 
@@ -87,49 +87,49 @@ Input Text → [1] → [2] → [3] → [4] → [5] → Final Numbers
    ./bin/Release/net6.0/win-x64/publish/TextProcessorCLI.exe
    ```
 
-## 🎮 Usage
+## Usage
 
 Launch the application and you'll see the main menu:
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║                         MAIN MENU                           ║
+║                         MAIN MENU                            ║
 ╠══════════════════════════════════════════════════════════════╣
-║  1. 📝 Process Text to Numbers                              ║
-║  2. 📖 View Dictionary Mapping                              ║
-║  3. ℹ️  About Program                                        ║
-║  4. 🚪 Exit                                                  ║
+║  1. Process Text to Numbers                                  ║
+║  2. View Dictionary Mapping                                  ║
+║  3. About Program                                            ║
+║  4. Exit                                                     ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
 Simply enter your choice (1-4) and follow the prompts!
 
-## 🎯 Menu Options
+## Menu Options
 
-### 1. 📝 Process Text to Numbers
+### 1. Process Text to Numbers
 Transform your text through the complete 5-step algorithm:
 - Enter any text string
 - Watch each transformation step
 - Get final numerical result
 
-### 2. 📖 View Dictionary Mapping
+### 2. View Dictionary Mapping
 Explore the character-to-number conversion tables:
 - **Uppercase letters**: A-Z mappings
 - **Lowercase letters**: a-z mappings  
 - **Number-to-letter**: Reverse conversion table
 - **Special characters**: Space and other symbols
 
-### 3. ℹ️ About Program
+### 3. About Program
 Learn about:
 - Detailed algorithm explanation
 - Technical implementation details
 - Performance characteristics
 - Development information
 
-### 4. 🚪 Exit
+### 4. Exit
 Gracefully exit the application with a farewell message.
 
-## 🔧 Technical Details
+## Technical Details
 
 ### Architecture
 
@@ -154,7 +154,7 @@ Gracefully exit the application with a farewell message.
 - **Error Handling**: Safe dictionary access with fallbacks
 - **UI Framework**: ASCII art with emoji enhancement
 
-## 📊 Examples
+## Examples
 
 ### Example 1: Simple Text
 
@@ -193,115 +193,5 @@ Step 5: 1 1 7 7
 | U | 8 | b,c,d | 8 |
 | V,W,X,Y,Z | 9 | a | 9 |
 
-## 🏗️ Project Structure
-
-```
-TextProcessorCLI/
-│
-├── Program.cs              # Main application entry point
-├── TextProcessorCLI.csproj # Project configuration
-├── README.md               # This file
-└── LICENSE                 # MIT License
-```
-
-## 🔨 Building from Source
-
-### Development Build
-```bash
-# Debug build
-dotnet build
-
-# Release build
-dotnet build -c Release
-```
-
-### Platform-Specific Builds
-```bash
-# Windows x64
-dotnet publish -c Release -r win-x64 --self-contained
-
-# Linux x64
-dotnet publish -c Release -r linux-x64 --self-contained
-
-# macOS x64
-dotnet publish -c Release -r osx-x64 --self-contained
-```
-
-## 🧪 Testing
-
-The application includes comprehensive error handling:
-
-- **Invalid Input**: Non-mapped characters default to 0
-- **Empty Input**: Graceful handling with user feedback
-- **Edge Cases**: Negative sums, zero values, large inputs
-- **Menu Navigation**: Input validation for menu choices
-
-## 🎨 Customization
-
-### Modifying Character Mappings
-
-Edit the `LetterToNumber` dictionary in `Program.cs`:
-
-```csharp
-private static readonly Dictionary<char, int> LetterToNumber = new Dictionary<char, int>
-{
-    {'A', 0},  // Modify these values
-    {'B', 1},  // Add new characters
-    // ... rest of mappings
-};
-```
-
-### Adding New Processing Steps
-
-Extend the `ProcessText` method:
-
-```csharp
-static void ProcessText(string input)
-{
-    // ... existing steps
-    
-    // Add your custom step
-    var customResult = YourCustomAlgorithm(refined);
-    Console.WriteLine($"6️⃣  STEP 6 - Custom Processing:");
-    Console.WriteLine($"    {customResult}");
-}
-```
-
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. **Fork the repository**
-2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
-3. **Commit your changes** (`git commit -m 'Add amazing feature'`)
-4. **Push to the branch** (`git push origin feature/amazing-feature`)
-5. **Open a Pull Request**
-
-### Development Guidelines
-
-- Follow C# coding conventions
-- Add XML documentation for public methods
-- Include unit tests for new features
-- Update README for significant changes
-
-
-## 🎯 Roadmap
-
-- [ ] **GUI Version** - Windows Forms or WPF interface
-- [ ] **API Endpoint** - REST API for web integration
-- [ ] **Batch Processing** - Process multiple files
-- [ ] **Custom Algorithms** - Plugin system for new algorithms
-- [ ] **Export Options** - JSON, CSV, XML output formats
-- [ ] **Performance Profiler** - Built-in benchmarking tools
-
-## 🙏 Acknowledgments
-
-- **Microsoft .NET Team** - For the excellent framework
-- **C# Community** - For best practices and inspiration
-- **ASCII Art Generators** - For beautiful CLI borders
-
----
-
-**Made with ❤️ and C#**
 
 [⬆ Back to Top](#-text-processor-cli)
