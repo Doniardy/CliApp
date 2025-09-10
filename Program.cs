@@ -74,7 +74,7 @@ namespace TextProcessorCLI
                         ShowExitMessage();
                         break;
                     default:
-                        Console.WriteLine("❌ Pilihan tidak valid! Silakan pilih 1-4.");
+                        Console.WriteLine("Pilihan tidak valid! Silakan pilih 1-4.");
                         break;
                 }
                 
@@ -162,11 +162,11 @@ namespace TextProcessorCLI
             Console.WriteLine("╚══════════════════════════════════════════════════════════════╝");
             Console.WriteLine();
             
-            Console.WriteLine("📖 CHARACTER TO NUMBER MAPPING:");
+            Console.WriteLine("CHARACTER TO NUMBER MAPPING:");
             Console.WriteLine(new string('-', 65));
             
             // Uppercase letters
-            Console.WriteLine("🔤 UPPERCASE LETTERS:");
+            Console.WriteLine("UPPERCASE LETTERS:");
             var uppercaseLetters = LetterToNumber.Where(kvp => char.IsUpper(kvp.Key)).OrderBy(kvp => kvp.Key);
             foreach (var group in uppercaseLetters.GroupBy(kvp => kvp.Value))
             {
@@ -358,7 +358,7 @@ namespace TextProcessorCLI
 
         static void ProcessText(string input)
         {
-            Console.WriteLine($"📥 INPUT: {input}");
+            Console.WriteLine($"dotINPUT: {input}");
             Console.WriteLine();
 
             var nums = TextToNumbers(input);
