@@ -1,10 +1,5 @@
 # Text Processor CLI
 
-[![.NET](https://img.shields.io/badge/.NET-6.0+-512BD4?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com/)
-[![C#](https://img.shields.io/badge/C%23-11.0-239120?style=flat-square&logo=c-sharp)](https://docs.microsoft.com/en-us/dotnet/csharp/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Cross--Platform-lightgrey?style=flat-square)](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md)
-
 > **Advanced Text-to-Number Converter with 5-Step Algorithm Processing**
 
 A sophisticated CLI application that transforms any text input through a comprehensive 5-step algorithm, producing deterministic numerical outputs with elegant mathematical operations.
