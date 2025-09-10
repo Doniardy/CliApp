@@ -101,16 +101,16 @@ namespace TextProcessorCLI
             Console.WriteLine("╔══════════════════════════════════════════════════════════════╗");
             Console.WriteLine("║                         MAIN MENU                            ║");
             Console.WriteLine("╠══════════════════════════════════════════════════════════════╣");
-            Console.WriteLine("║  1. 📝 Process Text to Numbers                               ║");
+            Console.WriteLine("║  1. Process Text to Numbers                                  ║");
             Console.WriteLine("║     Convert your text through the 5-step algorithm           ║");
             Console.WriteLine("║                                                              ║");
-            Console.WriteLine("║  2. 📖 View Dictionary Mapping                               ║");
+            Console.WriteLine("║  2. View Dictionary Mapping                                  ║");
             Console.WriteLine("║     Explore character-to-number mappings                     ║");
             Console.WriteLine("║                                                              ║");
-            Console.WriteLine("║  3. ℹ️  About Program                                        ║");
+            Console.WriteLine("║  3. About Program                                            ║");
             Console.WriteLine("║     Learn about the algorithm and features                   ║");
             Console.WriteLine("║                                                              ║");
-            Console.WriteLine("║  4. 🚪 Exit                                                  ║");
+            Console.WriteLine("║  4. Exit                                                     ║");
             Console.WriteLine("║     Close the application                                    ║");
             Console.WriteLine("╚══════════════════════════════════════════════════════════════╝");
             Console.WriteLine();
@@ -120,12 +120,12 @@ namespace TextProcessorCLI
         {
             while (true)
             {
-                Console.Write("🎯 Pilih menu (1-4): ");
+                Console.Write("Pilih menu (1-4): ");
                 if (int.TryParse(Console.ReadLine(), out int choice) && choice >= 1 && choice <= 4)
                 {
                     return choice;
                 }
-                Console.WriteLine("❌ Input tidak valid! Masukkan angka 1-4.");
+                Console.WriteLine("Input tidak valid! Masukkan angka 1-4.");
             }
         }
 
@@ -137,20 +137,20 @@ namespace TextProcessorCLI
             Console.WriteLine("╚══════════════════════════════════════════════════════════════╝");
             Console.WriteLine();
             
-            Console.Write("📝 Masukkan kalimat: ");
+            Console.Write("Masukkan kalimat: ");
             string input = Console.ReadLine();
             
             if (!string.IsNullOrEmpty(input))
             {
                 Console.WriteLine("\n" + new string('=', 65));
-                Console.WriteLine("                    PROCESSING RESULTS");
+                Console.WriteLine("PROCESSING RESULTS");
                 Console.WriteLine(new string('=', 65));
                 ProcessText(input);
                 Console.WriteLine(new string('=', 65));
             }
             else
             {
-                Console.WriteLine("❌ Input tidak boleh kosong!");
+                Console.WriteLine("Input tidak boleh kosong!");
             }
         }
 
@@ -177,7 +177,7 @@ namespace TextProcessorCLI
             Console.WriteLine();
             
             // Lowercase letters
-            Console.WriteLine("🔡 LOWERCASE LETTERS:");
+            Console.WriteLine("LOWERCASE LETTERS:");
             var lowercaseLetters = LetterToNumber.Where(kvp => char.IsLower(kvp.Key)).OrderBy(kvp => kvp.Key);
             foreach (var group in lowercaseLetters.GroupBy(kvp => kvp.Value).OrderByDescending(g => g.Key))
             {
@@ -186,7 +186,7 @@ namespace TextProcessorCLI
             }
             
             Console.WriteLine();
-            Console.WriteLine("🔢 NUMBER TO LETTER CONVERSION:");
+            Console.WriteLine("NUMBER TO LETTER CONVERSION:");
             Console.WriteLine(new string('-', 30));
             foreach (var kvp in NumberToLetter.OrderBy(kvp => kvp.Key))
             {
@@ -194,7 +194,7 @@ namespace TextProcessorCLI
             }
             
             Console.WriteLine();
-            Console.WriteLine("ℹ️  SPECIAL CHARACTERS:");
+            Console.WriteLine("SPECIAL CHARACTERS:");
             Console.WriteLine($"   Space (' ') → 0");
         }
 
@@ -206,47 +206,47 @@ namespace TextProcessorCLI
             Console.WriteLine("╚══════════════════════════════════════════════════════════════╝");
             Console.WriteLine();
             
-            Console.WriteLine("📋 ALGORITHM OVERVIEW:");
+            Console.WriteLine("ALGORITHM OVERVIEW:");
             Console.WriteLine("This program implements a 5-step text processing algorithm:");
             Console.WriteLine();
             
-            Console.WriteLine("🔹 STEP 1: Text to Numbers Conversion");
-            Console.WriteLine("   Convert each character in input text to corresponding number");
-            Console.WriteLine("   using predefined character-to-number mapping.");
+            Console.WriteLine("STEP 1: Text to Numbers Conversion");
+            Console.WriteLine("Convert each character in input text to corresponding number");
+            Console.WriteLine("using predefined character-to-number mapping.");
             Console.WriteLine();
             
-            Console.WriteLine("🔹 STEP 2: Alternating Sum Calculation");
-            Console.WriteLine("   Perform alternating addition and subtraction:");
-            Console.WriteLine("   First + Second - Third + Fourth - Fifth + ...");
+            Console.WriteLine("STEP 2: Alternating Sum Calculation");
+            Console.WriteLine("Perform alternating addition and subtraction:");
+            Console.WriteLine("First + Second - Third + Fourth - Fifth + ...");
             Console.WriteLine();
             
-            Console.WriteLine("🔹 STEP 3: Number to Letters Sequence");
-            Console.WriteLine("   Build a sequence that sums up to the result from step 2,");
-            Console.WriteLine("   then convert numbers back to letters.");
+            Console.WriteLine("STEP 3: Number to Letters Sequence");
+            Console.WriteLine("Build a sequence that sums up to the result from step 2,");
+            Console.WriteLine("then convert numbers back to letters.");
             Console.WriteLine();
             
-            Console.WriteLine("🔹 STEP 4: Sequence Refinement");
-            Console.WriteLine("   Apply alternating sum to the letter sequence from step 3,");
-            Console.WriteLine("   then replace the last 2 elements with refined sequence.");
+            Console.WriteLine("STEP 4: Sequence Refinement");
+            Console.WriteLine("Apply alternating sum to the letter sequence from step 3,");
+            Console.WriteLine("then replace the last 2 elements with refined sequence.");
             Console.WriteLine();
             
-            Console.WriteLine("🔹 STEP 5: Final Number Generation");
-            Console.WriteLine("   Convert refined letters to final numbers where:");
-            Console.WriteLine("   - Even numbers become odd (n + 1)");
-            Console.WriteLine("   - Odd numbers stay the same");
+            Console.WriteLine("STEP 5: Final Number Generation");
+            Console.WriteLine("Convert refined letters to final numbers where:");
+            Console.WriteLine("- Even numbers become odd (n + 1)");
+            Console.WriteLine("- Odd numbers stay the same");
             Console.WriteLine();
             
-            Console.WriteLine("🔧 TECHNICAL FEATURES:");
-            Console.WriteLine("• Case-sensitive character mapping");
-            Console.WriteLine("• Robust error handling");
-            Console.WriteLine("• Interactive CLI interface");
-            Console.WriteLine("• Step-by-step processing visualization");
+            Console.WriteLine("TECHNICAL FEATURES:");
+            Console.WriteLine("Case-sensitive character mapping");
+            Console.WriteLine("Robust error handling");
+            Console.WriteLine("Interactive CLI interface");
+            Console.WriteLine("Step-by-step processing visualization");
             Console.WriteLine();
             
-            Console.WriteLine("👨‍💻 DEVELOPED WITH:");
-            Console.WriteLine("• C# .NET 6.0+");
-            Console.WriteLine("• Cross-platform compatibility");
-            Console.WriteLine("• LINQ for efficient data processing");
+            Console.WriteLine("DEVELOPED WITH:");
+            Console.WriteLine("C# .NET 6.0+");
+            Console.WriteLine("Cross-platform compatibility");
+            Console.WriteLine("LINQ for efficient data processing");
             Console.WriteLine();
         }
 
@@ -256,7 +256,6 @@ namespace TextProcessorCLI
             Console.WriteLine("╔══════════════════════════════════════════════════════════════╗");
             Console.WriteLine("║                                                              ║");
             Console.WriteLine("║            Thank you for using this program                  ║");
-            Console.WriteLine("║                    See you next time!                        ║");
             Console.WriteLine("║                                                              ║");
             Console.WriteLine("╚══════════════════════════════════════════════════════════════╝");
             Console.WriteLine();
@@ -363,30 +362,30 @@ namespace TextProcessorCLI
             Console.WriteLine();
 
             var nums = TextToNumbers(input);
-            Console.WriteLine($"1️⃣  STEP 1 - Text to Numbers:");
-            Console.WriteLine($"    {string.Join(" ", nums)}");
+            Console.WriteLine($"1️STEP 1 - Text to Numbers:");
+            Console.WriteLine($"{string.Join(" ", nums)}");
             Console.WriteLine();
 
             var (expression, result) = AlternateSumWithSteps(nums);
-            Console.WriteLine($"2️⃣  STEP 2 - Alternating Sum:");
-            Console.WriteLine($"    {expression} = {result}");
+            Console.WriteLine($"2️STEP 2 - Alternating Sum:");
+            Console.WriteLine($"{expression} = {result}");
             Console.WriteLine();
 
             var letters = NumberToLetters(result);
-            Console.WriteLine($"3️⃣  STEP 3 - Number to Letters:");
-            Console.WriteLine($"    {string.Join(" ", letters)}");
+            Console.WriteLine($"3️STEP 3 - Number to Letters:");
+            Console.WriteLine($"{string.Join(" ", letters)}");
             Console.WriteLine();
 
             var refined = RefineSequence(letters);
-            Console.WriteLine($"4️⃣  STEP 4 - Refined Sequence:");
-            Console.WriteLine($"    {string.Join(" ", refined)}");
+            Console.WriteLine($"4️STEP 4 - Refined Sequence:");
+            Console.WriteLine($"{string.Join(" ", refined)}");
             Console.WriteLine();
 
             var finalNums = LettersToFinalNumbers(refined);
-            Console.WriteLine($"5️⃣  STEP 5 - Final Numbers:");
-            Console.WriteLine($"    {finalNums}");
+            Console.WriteLine($"5️STEP 5 - Final Numbers:");
+            Console.WriteLine($"{finalNums}");
             Console.WriteLine();
-            Console.WriteLine($"✅ FINAL RESULT: {finalNums}");
+            Console.WriteLine($"FINAL RESULT: {finalNums}");
         }
     }
 }
